@@ -1,27 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 10:29:37 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/11 13:10:50 by jhusso           ###   ########.fr       */
+/*   Created: 2022/12/11 13:07:04 by jhusso            #+#    #+#             */
+/*   Updated: 2022/12/11 13:07:14 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-#include "libft/libft.h"
-
-int		ft_printf(const char *format, ...);
-void	*check_specifier(va_list argp, const char *format);
-void	ft_puthex_printf(void *hex);
-
-#endif

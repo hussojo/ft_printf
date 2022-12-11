@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/09 11:04:22 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/11 14:23:19 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 void *check_specifier(va_list argp, const char *format)
 {
-	//char c = (char)argp;
-	// while (*format)
-	// {
-		if (*format == 'c')
-		{
-		ft_putchar_fd(va_arg(argp, int), 1);
-		// ft_putchar_fd(c, 1);
-		ft_putchar_fd('\n', 1);
-		// printf("here\n");s
-		}
-	// }
-//printf("here too\n");
-return(argp);
+	// do i need a variable for result?
+	if (*format == 'c')
+		/* variable =*/ ft_putchar_printf(va_arg(argp, int));
+	if (*format == 's')
+		ft_putstr_printf(va_arg(argp, int));
+	if (*format == 'p')
+		ft_puthex_printf((void *)va_arg(argp, int)); // is it int??
+
+	// if (*format == 'd')
+	// if (*format == 'i')
+	// if (*format == 'u')
+	// if (*format == 'x')
+	// if (*format == 'X')
+	// if (*format == '%')
+return(/* variable */);
 }
 
 
@@ -46,7 +48,7 @@ int ft_printf(const char *format, ...)
 			check_specifier(argp, &format[i+1]);
 			break;
 		}
-		ft_putchar_fd(format[i], 1);
+		ft_putchar_printf(format[i]);
 		i++;
 	}
 	// returns the number of
