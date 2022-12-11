@@ -6,9 +6,13 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:07:04 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/11 13:07:14 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/11 14:41:19 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+void	ft_puthex_printf(unsigned char hex)
+{
+
+}

@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/11 14:23:19 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/11 14:41:39 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void *check_specifier(va_list argp, const char *format)
 {
-	// do i need a variable for result?
+	void *output;
+
 	if (*format == 'c')
-		/* variable =*/ ft_putchar_printf(va_arg(argp, int));
+		output = ft_putchar_printf(va_arg(argp, int));
 	if (*format == 's')
-		ft_putstr_printf(va_arg(argp, int));
+		output = ft_putstr_printf(va_arg(argp, int));
 	if (*format == 'p')
-		ft_puthex_printf((void *)va_arg(argp, int)); // is it int??
+		output = ft_puthex_printf(va_arg(argp, unsigned char));
 
 	// if (*format == 'd')
 	// if (*format == 'i')
