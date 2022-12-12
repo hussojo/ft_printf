@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 10:29:37 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/11 13:10:50 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/12 12:00:57 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include "libft/libft.h"
 
 int		ft_printf(const char *format, ...);
-void	*check_specifier(va_list argp, const char *format);
-void	ft_puthex_printf(void *hex);
+int		check_specifier(va_list argp, const char format);
+int		ft_putptr_printf(unsigned int *ptr);
 
 #endif

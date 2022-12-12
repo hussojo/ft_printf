@@ -6,12 +6,11 @@
 #    By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 10:36:15 by jhusso            #+#    #+#              #
-#    Updated: 2022/12/11 14:20:59 by jhusso           ###   ########.fr        #
+#    Updated: 2022/12/12 12:00:58 by jhusso           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	ft_printf.c
-
+SRC =	ft_printf.c ft_printf_utils.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -26,20 +25,19 @@ NAME = libftprintf.a
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC)
 	cd $(LIBFT) && $(MAKE)
-	cp libft/libft.a .
-	mv libft.a $(NAME)
-	$(CC) -c $(BUILD_FLAGS) $(SRC) $()-I $(H_FILES)
+	cp $(LIBFT)/libft.a $@
+	$(CC) -c $(BUILD_FLAGS) $(SRC) -I $(H_FILES)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
-	rm -f libft/*.o
+	$(RM) $(OBJ)
+	cd $(LIBFT) && $(MAKE) clean
 
 fclean: clean
-	rm -f $(NAME)
-	rm -f libft/libft.a .
+	$(RM) $(NAME)
+	cd $(LIBFT) && $(MAKE) fclean
 
 re: fclean all
 
