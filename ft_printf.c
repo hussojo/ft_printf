@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/12 11:58:31 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/12 14:47:48 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int check_specifier(va_list argp, const char format)
 	if (format == 's')
 		ret += ft_putstr_printf(va_arg(argp, char *));
 	// if (format == 'p')
-	// 	ret += ft_putptr_printf(va_arg(argp, void *)); // make a function
+	// 	ret += ft_putstr_printf(va_arg(argp, int *)); // make a function
 
 	// if (*format == 'd')
 	// if (*format == 'i')
@@ -50,22 +50,24 @@ int ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			ret += check_specifier(argp, format[i+1]);
-			i++;
-			break;
+			i = i+2; // for not to print the specigier
 		}
-		ft_putchar_printf(format[i]);
-		i++;
+		else
+		{
+			ret += ft_putchar_printf(format[i]);
+			i++;
+		}
 	}
-	// returns the number of
-	// characters printed (excluding the null byte
-	// used to end output to strings)
 	va_end(argp);
 	return(i);
 }
 
 int main(void)
 {
-	ft_printf("Test: %c", 'd');
-	printf("Test: %c", 'e');
+	// int x = 10;
+	// int *ptr = &x;
+	ft_printf("Test: %s test\n", "moikka");
+	// printf("\n");
+	printf("Test: %s", "poikki");
 	return(0);
 }
