@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/12 14:47:48 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/13 15:37:50 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int check_specifier(va_list argp, const char format)
 	// if (format == 'p')
 	// 	ret += ft_putstr_printf(va_arg(argp, int *)); // make a function
 
-	// if (*format == 'd')
-	// if (*format == 'i')
+	if (format == 'd' || format == 'i')
+		ret += ft_putnbr_printf(va_arg(argp, int));
 	// if (*format == 'u')
 	// if (*format == 'x')
 	// if (*format == 'X')
@@ -49,7 +49,7 @@ int ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			ret += check_specifier(argp, format[i+1]);
+			ret = check_specifier(argp, format[i+1]);
 			i = i+2; // for not to print the specigier
 		}
 		else
@@ -66,8 +66,8 @@ int main(void)
 {
 	// int x = 10;
 	// int *ptr = &x;
-	ft_printf("Test: %s test\n", "moikka");
+	ft_printf("Test: %d test\n", 1700000);
 	// printf("\n");
-	printf("Test: %s", "poikki");
+	printf("Test: %d", 2700000);
 	return(0);
 }
