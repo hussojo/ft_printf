@@ -1,14 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_putunbr_printf.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:00:03 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:23:40 by jhusso           ###   ########.fr       */
+/*   Created: 2022/12/19 16:20:30 by jhusso            #+#    #+#             */
+/*   Updated: 2022/12/19 16:22:35 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
+int	ft_putu_printf(unsigned int n)
+{
+	int		len;
+	char	*output;
+
+	output = ft_itoa_unsigned(n);
+	ft_putstr_printf(output);
+	len = ft_strlen(output);
+	free (output);
+return(len);
+}

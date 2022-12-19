@@ -1,14 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_printf.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:00:03 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:23:40 by jhusso           ###   ########.fr       */
+/*   Created: 2022/11/05 10:54:16 by jhusso            #+#    #+#             */
+/*   Updated: 2022/12/19 13:51:11 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
+int	ft_putstr_printf(char *s)
+{
+	int	i;
+
+	if (s == NULL)
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (*s)
+	{
+		ft_putchar_printf(*s);
+		s++;
+		i++;
+	}
+	return (i);
+}

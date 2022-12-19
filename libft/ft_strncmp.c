@@ -1,14 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:00:03 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:23:40 by jhusso           ###   ########.fr       */
+/*   Created: 2022/10/29 15:28:55 by jhusso            #+#    #+#             */
+/*   Updated: 2022/11/02 11:50:11 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if ((unsigned char)s1[i] == (unsigned char)s2[i])
+		{
+			if (s1[i] == '\0' || s2[i] == '\0')
+				return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+			i++;
+		}
+		else
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (0);
+}

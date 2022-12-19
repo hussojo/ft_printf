@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/17 14:53:56 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/19 16:24:20 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int check_specifier(va_list argp, const char format)
 	else if (format == 's')
 		ret += ft_putstr_printf(va_arg(argp, char *));
 	else if (format == 'd' || format == 'i')
-		ret += ft_putnbr_printf(va_arg(argp, int )); // KOs
-	else if (format == 'x' || format == 'X')
-		ret += ft_puthex_printf(va_arg(argp, unsigned long), format);
-
-	// if (format == 'p')
-	// 	ret += ft_putstr_printf(va_arg(argp, int *)); // make a function
+		ret += ft_putnbr_printf(va_arg(argp, int ));
+	else if (format == 'x' || format == 'X') // KOs
+		ret += ft_puthex_printf(va_arg(argp, unsigned int), format);
+	if (format == 'p')
+		ret += ft_putptr_printf(va_arg(argp, void *));
+	if (format == 'u')
+		ret += ft_putu_printf(va_arg(argp, unsigned int));
 	// if (*format == '%')
-	// if (*format == 'u')
 return(ret);
 }
 

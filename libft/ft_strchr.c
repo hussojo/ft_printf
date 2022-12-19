@@ -1,14 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:00:03 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:23:40 by jhusso           ###   ########.fr       */
+/*   Created: 2022/10/29 11:10:01 by jhusso            #+#    #+#             */
+/*   Updated: 2022/11/11 13:29:43 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (NULL);
+}
