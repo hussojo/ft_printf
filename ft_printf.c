@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:24:20 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 12:28:40 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int check_specifier(va_list argp, const char format)
 		ret += ft_putptr_printf(va_arg(argp, void *));
 	if (format == 'u')
 		ret += ft_putu_printf(va_arg(argp, unsigned int));
-	// if (*format == '%')
+	if (format == '%')
+		ret += ft_putpercent_printf();
 return(ret);
 }
-
 
 int ft_printf(const char *format, ...)
 {

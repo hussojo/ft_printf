@@ -6,20 +6,20 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:01:24 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:25:26 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 11:31:10 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	i_len_unsigned(long nb)
+static int	i_len_unsigned(unsigned int nb)
 {
 	int		len;
 
 	len = 0;
 	if (nb == 0)
 		len = 1;
-	while (nb > 0)
+	while (nb)
 	{
 		nb = nb / 10;
 		len++;
@@ -27,7 +27,7 @@ static int	i_len_unsigned(long nb)
 	return (len);
 }
 
-void	count_nb_unsigned(char *str, long *nb, int *len)
+void	count_nb_unsigned(char *str, unsigned int *nb, int *len)
 {
 		str[*len - 1] = '0' + (*nb % 10);
 		*nb = *nb / 10;
@@ -38,7 +38,7 @@ char	*ft_itoa_unsigned(int n)
 {
 	char	*str;
 	int		len;
-	long	nb;
+	unsigned int	nb;
 
 	nb = n;
 	if (n == 0)
@@ -51,7 +51,7 @@ char	*ft_itoa_unsigned(int n)
 	str[len] = '\0';
 	if (nb == 0)
 		str[0] = '0';
-	while (nb > 0)
+	while (nb)
 		count_nb_unsigned(str, &nb, &len);
 	return (str);
 }
