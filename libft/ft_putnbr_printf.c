@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:07:58 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:19:03 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:23:27 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_putnbr_printf(int n)
 	ft_putstr_printf(output);
 	len = ft_strlen(output);
 	free (output);
-return(len);
+	return (len);
 }

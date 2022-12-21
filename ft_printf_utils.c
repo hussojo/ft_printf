@@ -6,13 +6,13 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:00:03 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/21 12:11:55 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:37:42 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putpercent_printf(void)
+int	ft_putpercent_printf(void)
 {
 	return (write(1, "%", 1));
 }

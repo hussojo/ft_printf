@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 10:50:15 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/15 11:30:40 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:22:15 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar_printf(char c)
 {
-	return(write (1, &c, 1));
+	return (write (1, &c, 1));
 }

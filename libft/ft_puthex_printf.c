@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 13:27:52 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/21 11:56:38 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:23:04 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,12 @@ void	ft_print_hex(unsigned int n, const char format)
 			if (format == 'X')
 				ft_putchar_printf(n + 55);
 		}
-
 	}
 }
 
-int ft_puthex_printf(unsigned int n, const char format)
+int	ft_puthex_printf(unsigned int n, const char format)
 {
-	int len;
+	int	len;
 
 	if (n == '0')
 	{
@@ -63,4 +62,3 @@ int ft_puthex_printf(unsigned int n, const char format)
 	len = ft_len_hex(n);
 	return (len);
 }
-

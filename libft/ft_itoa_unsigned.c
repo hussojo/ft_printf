@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:01:24 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/21 11:31:10 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:22:01 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	count_nb_unsigned(char *str, unsigned int *nb, int *len)
 
 char	*ft_itoa_unsigned(int n)
 {
-	char	*str;
-	int		len;
+	char			*str;
+	int				len;
 	unsigned int	nb;
 
 	nb = n;

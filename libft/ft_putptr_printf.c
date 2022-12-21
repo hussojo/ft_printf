@@ -6,12 +6,11 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:07:04 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/19 16:07:58 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/21 14:24:09 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int	ft_len_ptr(unsigned long nb)
 {
@@ -41,7 +40,6 @@ void	ft_print_ptr(unsigned long n)
 			ft_putchar_printf(n + 48);
 		else
 			ft_putchar_printf(n + 87);
-
 	}
 }
 
@@ -56,5 +54,5 @@ int	ft_putptr_printf(void *ptr)
 	else
 		ft_print_ptr((unsigned long)ptr);
 	len = ft_len_ptr((unsigned long)ptr);
-return (len + 2);
+	return (len + 2);
 }

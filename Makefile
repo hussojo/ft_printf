@@ -6,7 +6,7 @@
 #    By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 10:36:15 by jhusso            #+#    #+#              #
-#    Updated: 2022/12/15 15:00:03 by jhusso           ###   ########.fr        #
+#    Updated: 2022/12/21 14:35:27 by jhusso           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ BUILD_FLAGS = -Wall -Wextra -Werror
 LIBFT = ./libft
 INCLUDE = ./libft/libft.h
 
-SRC =	ft_printf.c ft_printf_utils.c main.c
+SRC =	ft_printf.c ft_printf_utils.c
 
 OBJ = $(SRC:.c=.o)
 
