@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 10:29:37 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/21 14:37:17 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/22 12:12:29 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdlib.h>
 
 # include "libft/libft.h"
 

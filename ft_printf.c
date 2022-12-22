@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:00:17 by jhusso            #+#    #+#             */
-/*   Updated: 2022/12/21 14:30:25 by jhusso           ###   ########.fr       */
+/*   Updated: 2022/12/22 14:29:22 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ int	ft_printf(const char *format, ...)
 			ret += check_specifier(argp, format[i + 1]);
 			i = i + 2;
 		}
+		else if (format[i] == '%' && format[i + 1] == '\0')
+			i++;
 		else
 		{
 			ret += ft_putchar_printf(format[i]);
